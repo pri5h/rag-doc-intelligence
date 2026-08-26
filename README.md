@@ -2,6 +2,10 @@
 
 A full-stack, local Retrieval-Augmented Generation (RAG) pipeline that allows users to upload PDF documents and ask natural language questions, receiving accurate, cited answers powered by a local Large Language Model (LLM).
 
+## Demo
+*(Optional: Replace this text with a link to a Loom/YouTube video or an embedded GIF demonstrating the application in action.)*
+[Watch the demonstration here]
+
 ## Problem Statement and Solution
 
 **The Problem:** Organizations manage massive volumes of unstructured PDF documents, including manuals, contracts, and research papers. Traditional keyword-based search fails when a user's query does not exactly match the text in the document. Furthermore, pasting entire documents into a cloud-based LLM often leads to context window limitations, data privacy concerns, and model hallucinations.
@@ -46,30 +50,21 @@ graph TD
 
 ### 1. Local Development Setup
 \`\`\`bash
-# Clone the repository
 git clone https://github.com/pri5h/rag-doc-intelligence.git
 cd rag-doc-intelligence
 
-# Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate
-
-# Install Python dependencies
 pip install -r requirements.txt
 
-# Pull the local LLM model
 ollama pull llama3.2
 
-# Start the Backend API server
 uvicorn app.main:app --reload
-
-# Start the Frontend UI (in a separate terminal window)
 streamlit run app.py
 \`\`\`
 
 ### 2. Docker Deployment (Recommended)
 \`\`\`bash
-# Build and start the containerized application
 docker compose up --build
 \`\`\`
 *Once running, access the interactive API documentation at \`http://127.0.0.1:8000/docs\` and the user interface at \`http://localhost:8501\`.*
