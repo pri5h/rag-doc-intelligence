@@ -64,10 +64,6 @@ Planned architectural and feature improvements for future iterations include:
 - **Conversational Memory:** Integrating chat history and session state to allow users to ask contextual follow-up questions.
 - **Multi-Document Support:** Expanding the vector database schema to support querying across multiple documents simultaneously, with metadata filtering by date, author, or document type.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-
 ## System Architecture
 
 ```mermaid
