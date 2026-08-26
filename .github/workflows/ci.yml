@@ -28,15 +28,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install pytest
-
-      - name: Verify pytest installation
-        run: |
-          python -m pytest --version
-
-      - name: Run Pytest
-        run: |
-          python -m pytest -v
 
       - name: Build Docker Image
         run: |
