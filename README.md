@@ -2,10 +2,6 @@
 
 A full-stack, local Retrieval-Augmented Generation (RAG) pipeline that allows users to upload PDF documents and ask natural language questions, receiving accurate, cited answers powered by a local Large Language Model (LLM).
 
-## Demo
-*(Optional: Replace this text with a link to a Loom/YouTube video or an embedded GIF demonstrating the application in action.)*
-[Watch the demonstration here]
-
 ## Problem Statement and Solution
 
 **The Problem:** Organizations manage massive volumes of unstructured PDF documents, including manuals, contracts, and research papers. Traditional keyword-based search fails when a user's query does not exactly match the text in the document. Furthermore, pasting entire documents into a cloud-based LLM often leads to context window limitations, data privacy concerns, and model hallucinations.
