@@ -1,0 +1,10 @@
+services:
+  rag-api:
+    build: .
+    container_name: rag-doc-intelligence
+    # This allows the container to access Ollama running on your host machine
+    network_mode: host
+    volumes:
+      # Mount the data folder so your uploaded PDFs and DB persist even if the container restarts
+      - ./data:/app/data
+    restart: unless-stopped
