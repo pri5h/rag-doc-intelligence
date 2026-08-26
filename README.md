@@ -8,21 +8,6 @@ A full-stack, local Retrieval-Augmented Generation (RAG) pipeline that allows us
 
 **The Solution:** A local RAG pipeline. The system ingests documents by breaking them into semantic chunks, converting them into mathematical vectors, and storing them in a Vector Database. When a user submits a query, the system retrieves the most contextually relevant chunks and feeds them to a local LLM. This ensures the generated answer is strictly grounded in the provided text, completely eliminating hallucinations and maintaining data privacy.
 
-## System Architecture
-
-```mermaid
-graph TD
-    A[PDF Document] --> B[Text Extraction via pdfplumber]
-    B --> C[Chunking via LangChain]
-    C --> D[Local Embeddings via Sentence-Transformers]
-    D --> E[(Chroma Vector DB)]
-    F[User Query via Streamlit UI] --> G[Query Embedding]
-    G --> H{Similarity Search}
-    E --> H
-    H --> I[Top K Relevant Chunks]
-    I --> J[Local LLM Generation via Ollama]
-    J --> K[Grounded Answer with Citations]
-
 ## Technology Stack
 
 | Layer | Technology | Purpose |
@@ -82,3 +67,18 @@ Planned architectural and feature improvements for future iterations include:
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+
+## System Architecture
+
+```mermaid
+graph TD
+    A[PDF Document] --> B[Text Extraction via pdfplumber]
+    B --> C[Chunking via LangChain]
+    C --> D[Local Embeddings via Sentence-Transformers]
+    D --> E[(Chroma Vector DB)]
+    F[User Query via Streamlit UI] --> G[Query Embedding]
+    G --> H{Similarity Search}
+    E --> H
+    H --> I[Top K Relevant Chunks]
+    I --> J[Local LLM Generation via Ollama]
+    J --> K[Grounded Answer with Citations]
